@@ -17,6 +17,8 @@ public class _03_ElseIf {
 
         System.out.println("#1 커피주문완료");
 
+        //else가 꼭 있을 필요는 없다.
+
     }
 
 }
