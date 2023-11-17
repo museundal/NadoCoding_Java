@@ -21,5 +21,9 @@ public class _12_Inheritance {
         factoryCam.recordVideo();
         speedCam.takePicture();
 
+        factoryCam.detectFire();
+        speedCam.checkSpeed();
+        speedCam.recognizeLicensePlate();
+
     }
 }

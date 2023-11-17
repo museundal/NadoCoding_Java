@@ -1,19 +1,10 @@
 package chap_07.camera;
 
-public class SpeedCam {
+public class SpeedCam extends Camera { // 부모 클래스를 상속받은 자식 클래스
 
-    public String name;
 
     public SpeedCam() {
         this.name = "과속단속카메라";
-    }
-
-    public void takePicture() {
-        System.out.println("사진을 촬영합니다");
-    }
-
-    public void recordVideo() {
-        System.out.println("동영상을 녹화합니다.");
     }
 
     public void checkSpeed() {
