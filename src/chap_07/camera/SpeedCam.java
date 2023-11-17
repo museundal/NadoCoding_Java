@@ -15,4 +15,8 @@ public class SpeedCam extends Camera { // 부모 클래스를 상속받은 자�
         System.out.println("차량 번호를 인식합니다.");
     }
 
+    @Override
+    public void showMainFeature() {
+        System.out.println(this.name + "의 주요 기능 : 사진촬영, 속도측정, 차량번호 인식");
+    }
 }
