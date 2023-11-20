@@ -5,8 +5,12 @@ public class Camera { // 부모 클래스
     public String name;
 
     public Camera() {
-        this.name = "카메라";
+        this("카메라"); // 밑에 있는 메서드를 호출
     }
+
+     protected  Camera(String name){
+        this.name =name;
+     }
 
     public void takePicture() {
         System.out.println(this.name +" : 사진을 촬영합니다");

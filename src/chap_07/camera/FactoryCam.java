@@ -4,7 +4,16 @@ public class FactoryCam extends Camera {// // 부모 클래스를 상속받은 �
 
 
     public FactoryCam() {
-        this.name = "공장카메라";
+        // 여기서 부모 클래스(Camera)의 name 필드에 "공장카메라"라는 값을 할당합니다.
+       // this.name = "공장카메라";
+
+        super("공장카메라"); // 부모클래스의 생성자에 접근
+    }
+
+    @Override // 부모 Camera 메서드를 오버라이드
+    public void recordVideo() { //동영상 녹화와 동시에 불 감지
+        super.recordVideo();
+        detectFire();
     }
 
     public void detectFire() {

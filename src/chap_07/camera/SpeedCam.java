@@ -3,8 +3,16 @@ package chap_07.camera;
 public class SpeedCam extends Camera { // 부모 클래스를 상속받은 자식 클래스
 
 
+    @Override
+    public void takePicture() {
+        super.takePicture();
+        checkSpeed();
+        recognizeLicensePlate();
+    }
+
     public SpeedCam() {
-        this.name = "과속단속카메라";
+        //this.name = "과속단속카메라";
+        super("과속단속카메라");
     }
 
     public void checkSpeed() {
