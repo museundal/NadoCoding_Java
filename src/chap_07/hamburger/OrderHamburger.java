@@ -18,5 +18,6 @@ public class OrderHamburger {
         System.out.println("메뉴 준비가 완료되었습니다.");
 
 
+
     }
 }
