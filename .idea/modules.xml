@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/NadoCoding.iml" filepath="$PROJECT_DIR$/NadoCoding.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/NadoCoding.iml" filepath="$PROJECT_DIR$/.idea/NadoCoding.iml" />
     </modules>
   </component>
 </project>
