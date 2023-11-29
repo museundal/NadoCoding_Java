@@ -1,9 +1,8 @@
 package chap_09;
 
-import chap_09.coffee.Coffee;
-import chap_09.coffee.CoffeeByName;
-import chap_09.coffee.CoffeeByNickName;
-import chap_09.coffee.CoffeeByNumber;
+import chap_09.coffee.*;
+import chap_09.user.User;
+import chap_09.user.VIPUser;
 
 public class _02_GenericClass {
     public static void main(String[] args) {
@@ -39,16 +38,39 @@ public class _02_GenericClass {
         int c5Name = c5.name; // 형변환이 필요 없습니다. 자바의 언박싱 기능 덕분에 가능한 것으로, Integer 객체가 자동으로 기본 타입 int로 변환
         System.out.println("주문 고객 번호 : " + c5Name);
 
-       // Coffee<Integer> c7 = new Coffee<>("한지민");
-       // c5.ready();  이  타입은 Integer 를 기대하고 있다며 에러가 납니다!
+        // Coffee<Integer> c7 = new Coffee<>("한지민");
+        // c5.ready();  이  타입은 Integer 를 기대하고 있다며 에러가 납니다!
         Coffee<String> c6 = new Coffee<>("SHINEE");
         c6.ready();
         String c6Name = c6.name;
         System.out.println("주문 고객 이름 : " + c6Name);
-
-
-
+        System.out.println("===================");
+        CoffeeByUser<User> c7 = new CoffeeByUser<>(new User("김도연"));
+        c7.ready();
+        CoffeeByUser<User> c8 = new CoffeeByUser<>(new VIPUser("문태일"));
+        //User를 상속받는 건 다 되니까 가능
+        c8.ready();
+        // CoffeeByUser<User> c9 = new CoffeeByUser<>(new BlackBox()); , User를 상속받는게 아니어서 에러!
+        System.out.println("===================");
+        orderCoffee("김도영");
+        orderCoffee(127);
+        orderCoffee("정재현", "아메리카노");
+        orderCoffee(999,"밀크티" );
 
 
     }
+
+    public static <T> void orderCoffee(T name) {
+        System.out.println("커피 주문 완료 : " + name);
+
+    }
+
+    public static <T, V> void orderCoffee(T name, V coffee) {
+        System.out.println(coffee + " 주문 완료 : " + name);
+
+    }
+}
+
+class BlackBox {
+
 }
