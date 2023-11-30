@@ -58,6 +58,8 @@ public class _02_GenericClass {
         orderCoffee(999,"밀크티" );
 
 
+
+
     }
 
     public static <T> void orderCoffee(T name) {
