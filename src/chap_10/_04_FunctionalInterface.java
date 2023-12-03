@@ -1,11 +1,13 @@
 package chap_10;
 
 import chap_10.converter.Convertible;
+import chap_10.converter.ConvertibleWithNoParam;
+import chap_10.converter.ConvertibleWithTwoParams;
 import chap_10.converter.KRWConverter;
 
 public class _04_FunctionalInterface {
-    //함수형 인터페이스 : 함수형 인터페이스는 하나의 추상메소드가 존재해야 한다는 조건이 있습니다.
     /*
+     함수형 인터페이스 : 함수형 인터페이스는 하나의 추상메소드가 존재해야 한다는 조건이 있습니다.
     convertUSD 에 전달하는 람다식을 메소드 내에서는 다음과 같이 Convertible 인터페이스로 받으며 Convertible 인터페이스 내에서 하나만 존재하는 convert() 라는 추상 메소드에 동작이 정의
      */
     public static void main(String[] args) {
@@ -42,7 +44,10 @@ public class _04_FunctionalInterface {
         //convertUSD((USD) -> System.out.println(USD + "달러 = " + (USD * 1400) + "원"), 1); // 한줄이니까 중괄호,세미콜론 생략가능
         Convertible convertible = (USD) -> System.out.println(USD + "달러 = " + (USD * 1400) + "원"); // 인터페이스의 동작을 변수처럼 전달
         // 이러한 인터페이스를 함수형 인터페이스라고 부릅니다.
-        convertUSD(convertible,1);
+        convertUSD(convertible,2);
+
+
+
     }
 
     public static void convertUSD(Convertible converter, int USD) {

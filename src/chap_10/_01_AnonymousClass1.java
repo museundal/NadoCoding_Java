@@ -5,11 +5,10 @@ public class _01_AnonymousClass1 {
         //익명 클래스 - 이름이 없는 클래스
         //클래스도 다른 클래스 내부에 정의 할 수도 있는데 이걸 내부클래스라고 합니다!
         //내부 클래스 중 특별한 익명클래스~
-        // 커피를 상속해서 다른 스페셜 커피 만들 필요없이 메소드만 재정의 ~
+        // 커피를 상속해서 다른 스페셜 커피 클래스 만들 필요없이 메소드만 재정의 ~
 
         Coffee c1 = new Coffee();
         c1.order("아메리카노");
-        System.out.println();
         Coffee c2 = new Coffee();
         c2.order("라떼");
         System.out.println();
@@ -20,13 +19,13 @@ public class _01_AnonymousClass1 {
             @Override
             public void order(String coffee) {
                 super.order(coffee); // order 적으니까 자동으로 오버라이드가 되었습니다.
-                System.out.println("(딸기 케이크는 서비스야 )");
+                System.out.println("(친구야 딸기 케이크는 서비스야 )");
             }
 
             @Override
             public void returnTray() {
                 //super.returnTra();
-                System.out.println("자리에 두면 내가 치울게");
+                System.out.println("친구야 자리에 두면 내가 치울게");
             }
         };
 

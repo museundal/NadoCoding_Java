@@ -1,9 +1,11 @@
 package chap_10.converter;
+
 @FunctionalInterface
 public interface Convertible {
     //Convertble 인터페이스는 함수형 인터페이스
-    void convert (int USD);
-   // void convert2(int KRW);   //함수형 인터페이스의 추상메소드랑 람다식이 1:1이어야 되는데 뭘해야될지 몰라서 에러난다.
+    void convert(int USD);
+    // void convert2(int KRW);
+    // 함수형 인터페이스의 추상메소드랑 람다식이 1:1이어야 되는데 뭘해야될지 몰라서 에러난다.
     //이런걸 방지하기 위해서 애노테이션 달기
 
     /*
