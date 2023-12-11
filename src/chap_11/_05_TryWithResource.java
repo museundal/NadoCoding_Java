@@ -19,7 +19,6 @@ public class _05_TryWithResource {
             }
         }//try
         // 항상  close() 를 신경써야 된다는게 번거로울 수 있습니다.
-        //소괄호 안에서 객체 생성 해보기 , close() 메소드를 자동으로 어디선가 호출 해준게 보임
         // try 구문 내에서 사용할 Resource 를 괄호 속에서 정의하면 자동으로 close()를 호출한다.
         // 객체는 근데  AutoCloseable 인터페이스를 구현해야 자동으로 close()가 됩니다.
 
